@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Work from "./components/Work";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Intro from "./components/Intro";
+import Header from "./components/Header";
+
+import { useState } from "react";
 
 function App() {
+
+  const [classname, setClassName] = useState('')
+
+
+  let lastScrollY = window.pageYOffset
+  window.addEventListener("scroll", () => {
+    const scrollY = window.pageYOffset
+    scrollY > lastScrollY ? setClassName('disappear'): setClassName('appear')
+    lastScrollY = scrollY
+  })
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header classname={classname}/>
+      <Intro />
+      <About />
+      <Work />
+      <Footer />
     </div>
   );
 }
