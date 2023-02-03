@@ -363,6 +363,8 @@ body {
   margin: 10px;
   width: 500px;
   text-align: center;
+
+  border-radius: 5px;
 }
 
 a{
@@ -644,15 +646,15 @@ a{
   }
 
   .other_work {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   
   .work_card {
-      padding: 10px;
-      width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 
   .work_image1, .work_image2, .work_image3, .work_image4 {
