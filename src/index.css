@@ -550,8 +550,8 @@ a{
 
   .outside-responsive {
     opacity: 0.9;
-    transition: all;
-    transition-delay: 0.3s;
+    transition: all 0.2s;
+    transition-delay: 0.45s;
   }
 
   .header-nav-links {
@@ -587,7 +587,7 @@ a{
 
   .responsive {
     right: 0;
-    transition: all 0.4s;
+    transition: all 0.45s;
   }
 
   .intro {
