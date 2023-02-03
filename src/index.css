@@ -507,17 +507,21 @@ a{
 
 @media only screen and (max-width: 610px){
 
-  .social-links-header {
-    display: block;
-    position: absolute;
-    bottom: 30%;
-    right: 10px;
+  .prevent-body-scroll {
+    position: fixed;
+  }
+
+  .social-links-header {  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
   }
 
   .social-links-header > * {
     color: #c2bebe;
-    margin: 0 20px;
-    font-size: 40px;
+    margin: 0 7vw;
+    font-size: 7vw;
   }
 
   .social-links-header > *:hover {

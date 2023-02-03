@@ -19,6 +19,8 @@ const Header = ({classname}) => {
     const showHeaderMenu = () => {
       const headerMenu = document.querySelector('.responsive-menu')
       const outsideMenu = document.querySelector('.outside-menu')
+      const body = document.querySelector('body')
+      body.className = 'prevent-body-scroll'
       headerMenu.className += " responsive"
       outsideMenu.className += " outside-responsive"
       setMenuToggle(!menuToggle)
@@ -27,6 +29,8 @@ const Header = ({classname}) => {
     const hideHeaderMenu = () => {
       const headerMenu = document.querySelector('.responsive-menu')
       const outsideMenu = document.querySelector('.outside-menu')
+      const body = document.querySelector('body')
+      body.className = ''
       headerMenu.className = 'responsive-menu'
       outsideMenu.className = "outside-menu"
       setMenuToggle(!menuToggle)
