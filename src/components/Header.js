@@ -10,10 +10,8 @@ const Header = ({classname}) => {
     const [menuToggle, setMenuToggle] = useState(false)
 
     const getSection = (section) => {
+        hideHeaderMenu()
         section.scrollIntoView({behavior: 'smooth'})
-        const headerMenu = document.querySelector('.responsive-menu')
-        headerMenu.className = 'responsive-menu'
-        setMenuToggle(!menuToggle)
     }
 
     const showHeaderMenu = () => {
