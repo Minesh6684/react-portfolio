@@ -32,6 +32,12 @@ body {
   z-index: 2;
 }
 
+.portfolio-logo {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
 .header-logo {
   z-index: 3;
 }
@@ -164,6 +170,11 @@ body {
 
 .profile-photo-section {
   width: 252px;
+  opacity: 0.5;
+}
+
+.profile-photo-section:hover {
+  opacity: 1;
 }
 
 .profile-photo {

@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import {VscListSelection} from 'react-icons/vsc'
 import {AiOutlineClose} from 'react-icons/ai'
+import portLogo from '../img/portfolio_logo_transparent.png'
 
 const Header = ({classname}) => {
 
@@ -34,7 +35,7 @@ const Header = ({classname}) => {
 
   return (
     <div className={`header ${classname}`}>
-      <div className="header-logo">MT</div>
+      <div className="header-logo"><img src={portLogo} alt="" className='portfolio-logo'/></div>
       {menuToggle && <AiOutlineClose className='header-nav-listIcon closeButton' onClick={hideHeaderMenu}/>}
       <div className='responsive-menu'>
         <div className='outside-menu' onClick={hideHeaderMenu}></div>
