@@ -45,7 +45,7 @@ const Header = ({classname}) => {
         <ul className='header-nav-links'>
             <li onClick={() => getSection(document.getElementById('about'))}>About</li>
             <li onClick={() => getSection(document.getElementById('work'))}>Work</li>
-            <li className='header-resume'>Resume</li>
+            <li ><a className='header-resume' href='https://drive.google.com/file/d/1Eeq1oKWnQBmVVcZknleIn2PVvPc3Jmuu/view' target="_blank" rel="noreferrer">Resume</a></li>
             <div className="social-links-header">
               <a href="https://github.com/Minesh6684" target='_blank' rel="noreferrer"><FiGithub /></a>
               <a href="https://www.linkedin.com/in/minesh-tandel-5a66bb1b1/" target='_blank' rel="noreferrer"><FiLinkedin /></a>

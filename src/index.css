@@ -71,6 +71,8 @@ body {
 }
 
 .header-resume {
+  color: #63fedb;
+  padding: 10px;
   border: 1px solid #63fedb;
   border-radius: 5px;
 }

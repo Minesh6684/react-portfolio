@@ -7,7 +7,7 @@ const Intro = () => {
         <h2 className="intro-designation">I develop things for the web.</h2>
       </div>
       <p className="intro-current-role">I am an Internet Programming student at TAV College, Montreal. Currently I'am focused towards learning Three.js.</p>
-      <a className="intro-cv" href="https:/facebook.com">Download CV</a>
+      <a className="intro-cv" href="https://drive.google.com/file/d/1Eeq1oKWnQBmVVcZknleIn2PVvPc3Jmuu/view" target="_blank" rel="noreferrer">Download CV</a>
     </div>
   )
 }
