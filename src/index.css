@@ -1,3 +1,9 @@
+:root {
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,10 +20,11 @@ html {
 
 body {
   background-color: #091930;
-  font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
-
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", system-ui,
+    sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header {
@@ -26,7 +33,7 @@ body {
   color: #63fedb;
   padding: 30px;
   font-size: 20px;
-  background-color:#091930;
+  background-color: #091930;
 
   position: sticky;
   z-index: 2;
@@ -67,7 +74,7 @@ body {
 
 .header-nav-links > li:hover {
   cursor: pointer;
-  color:#e9eeff;
+  color: #e9eeff;
 }
 
 .header-resume {
@@ -193,15 +200,58 @@ body {
   border-radius: 15px;
 }
 
-
-.work {
+.work,
+.experience {
   /* border: 1px solid red; */
   color: #cdd6f6;
   background-color: #091930;
   padding: 120px 0;
 }
 
-.work_head{
+.experience-card-container {
+  width: 70%;
+  margin: 0 auto;
+  /* display: flex; */
+  /* gap: 60px; */
+}
+
+.experience-card-description {
+  width: 70%;
+}
+
+.experience-card-company {
+  /* width: 30%; */
+  color: #63fedb;
+  font-size: 20px;
+}
+
+.experience-card-work {
+  margin-top: 25px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.experience-card-timeline {
+  font-size: 13px;
+}
+
+.experience-card-description > p {
+  margin-bottom: 15px;
+}
+
+.experience-card-work-point {
+  display: flex;
+  color: #8791ae;
+  text-align: justify;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  line-height: 1.3;
+  /* font-family: var(--font-sans); */
+}
+
+.work_head {
   width: 70%;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -222,7 +272,7 @@ body {
 }
 
 .work_image1 {
-  background-image: url('./img/FeedEveryone.png');
+  background-image: url("./img/FeedEveryone.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 400px; */
@@ -232,7 +282,7 @@ body {
 }
 
 .work_image2 {
-  background-image: url('./img/bookArena.png');
+  background-image: url("./img/bookArena.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 400px; */
@@ -242,7 +292,7 @@ body {
 }
 
 .work_image3 {
-  background-image: url('./img/FishOn.png');
+  background-image: url("./img/FishOn.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 400px; */
@@ -252,7 +302,7 @@ body {
 }
 
 .work_image4 {
-  background-image: url('./img/ttt.png');
+  background-image: url("./img/ttt.png");
   background-repeat: no-repeat;
   background-size: contain;
   /* height: 400px; */
@@ -261,12 +311,16 @@ body {
   opacity: 0.5;
 }
 
-.work_image1:hover, .work_image2:hover, .work_image3:hover, .work_image4:hover {
+.work_image1:hover,
+.work_image2:hover,
+.work_image3:hover,
+.work_image4:hover {
   opacity: 1;
   transition: opacity 0.5s;
 }
 
-.work_details, .work_details_reverse {
+.work_details,
+.work_details_reverse {
   color: #cdd6f6;
   width: 50%;
 }
@@ -284,7 +338,7 @@ body {
 .work_description {
   background-color: #102240;
   text-align: end;
-  padding: 25px; 
+  padding: 25px;
   border-radius: 5px;
   margin-top: 20px;
 }
@@ -312,12 +366,12 @@ body {
 .work_description_reverse {
   background-color: #102240;
   text-align: start;
-  padding: 25px; 
+  padding: 25px;
   border-radius: 5px;
   margin-top: 20px;
 }
 
-.github_link{
+.github_link {
   padding-right: 15px;
 }
 .work_links {
@@ -331,10 +385,11 @@ body {
 
 .work_title {
   font-size: 25px;
-  color: #cdd6f6
+  color: #cdd6f6;
 }
 
-.work_title:hover, .bi:hover {
+.work_title:hover,
+.bi:hover {
   color: #63fedb;
 }
 
@@ -352,7 +407,6 @@ body {
   height: 100%;
 }
 
-
 .other_work {
   display: flex;
   justify-content: center;
@@ -369,7 +423,7 @@ body {
   border-radius: 5px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -395,18 +449,16 @@ a{
   color: #63fedb;
 }
 
-
 @media only screen and (max-width: 960px) and (min-width: 751px) {
-
   .intro {
     width: 85%;
   }
-  
+
   .intro-name-designation {
     padding: 15px 0 35px 0;
     font-size: 50px;
   }
-  
+
   .intro-cv {
     font-size: 18px;
     padding: 18px;
@@ -418,42 +470,50 @@ a{
   .about {
     width: 80%;
   }
-  
+
   .about-description {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  
+
   .about-me {
     width: 100%;
   }
-  
+
   .profile-photo-section {
     width: 252px;
     margin-top: 40px;
   }
 
-  .work_container, .work_head {
-      width: 80%;
-      margin: 0 auto;
-      margin-bottom: 25px;
+  .experience-card-container {
+    width: 80%;
+  }
+
+  .experience-card-description {
+    width: 100%;
+  }
+
+  .work_container,
+  .work_head {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
 
   .other_work {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
   }
 }
 
 @media only screen and (max-width: 750px) and (min-width: 611px) {
-
   .intro {
     width: 87%;
   }
-  
+
   .intro-name-designation {
     font-size: 40px;
   }
@@ -461,7 +521,7 @@ a{
   .intro-current-role {
     font-size: 18px;
   }
-  
+
   .intro-cv {
     font-size: 15px;
     padding: 15px;
@@ -480,7 +540,7 @@ a{
     align-items: center;
     padding: 0;
   }
-  
+
   .about-me {
     width: 100%;
   }
@@ -489,33 +549,43 @@ a{
     margin-top: 40px;
   }
 
-  .work_image1, .work_image2, .work_image3, .work_image4 {
-      display: none;
+  .experience-card-container {
+    width: 90%;
   }
 
-  .work_details{
-      left: 0;
-      width: 100%;
-      border-radius: 10px;
+  .experience-card-description {
+    width: 100%;
+  }
+
+  .work_image1,
+  .work_image2,
+  .work_image3,
+  .work_image4 {
+    display: none;
+  }
+
+  .work_details {
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
   }
 
   .work_details_reverse {
-      right: 0;
-      width: 100%;
+    right: 0;
+    width: 100%;
   }
 
   .work_container {
-      height: auto;
+    height: auto;
   }
 }
 
-@media only screen and (max-width: 610px){
-
+@media only screen and (max-width: 610px) {
   .prevent-body-scroll {
     position: fixed;
   }
 
-  .social-links-header {  
+  .social-links-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -603,19 +673,19 @@ a{
   .intro-name-designation {
     font-size: 40px;
   }
-  
+
   .intro-name {
     font-size: 1.5em;
   }
-  
+
   .intro-designation {
     font-size: 1em;
   }
-  
+
   .intro-current-role {
     font-size: 18px;
   }
-  
+
   .intro-cv {
     font-size: 15px;
     padding: 15px;
@@ -634,7 +704,7 @@ a{
     align-items: center;
     padding: 0;
   }
-  
+
   .about-me {
     width: 100%;
   }
@@ -652,40 +722,51 @@ a{
     flex-direction: column;
     width: 100%;
   }
-  
+
+  .experience-card-container {
+    width: 90%;
+  }
+
+  .experience-card-description {
+    width: 100%;
+  }
+
   .work_card {
     width: 90%;
     margin: 0 auto;
     margin-top: 30px;
   }
 
-  .work_image1, .work_image2, .work_image3, .work_image4 {
-      width: 100%;
-      display: none;
+  .work_image1,
+  .work_image2,
+  .work_image3,
+  .work_image4 {
+    width: 100%;
+    display: none;
   }
 
   .work_details {
-      left: 0;
-      width: 100%;
-      border-radius: 10px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
   }
 
   .work_details_reverse {
-      width: 100%;
-      right: 0;
+    width: 100%;
+    right: 0;
   }
 
   .work_container {
-      width: 90%;
-      height: auto;
-      margin: 0 auto;
-      margin-bottom: 20px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .work_head {
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 25px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
 }
 
@@ -693,15 +774,15 @@ a{
   .intro-name-designation {
     font-size: 35px;
   }
-  
+
   .intro-name {
     font-size: 1.1em;
   }
-  
+
   .intro-designation {
     font-size: 0.7333em;
   }
-  
+
   .intro-current-role {
     font-size: 18px;
   }
