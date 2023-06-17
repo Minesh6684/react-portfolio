@@ -14,7 +14,7 @@ const Intro = () => {
       </p>
       <a
         className="intro-cv"
-        href="https://drive.google.com/file/d/1-Bvn__1azoFwDSrFzrUmWxXLrvJpBt3w/view?usp=drive_link"
+        href="https://github.com/Minesh6684/Resume/raw/main/Minesh_FS_Resume.pdf"
         target="_blank"
         rel="noreferrer"
       >
